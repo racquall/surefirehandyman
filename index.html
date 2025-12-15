@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SureFire Handyman Services+ | Basket of Dreams LLC</title>
+  <meta name="description" content="SureFire Handyman Services+ delivers reliable flat-rate handyman services with professional, insured subcontractors. Request service, view our work, or apply to subcontract." />
+  <style>
+    :root{
+      --bg:#0f1115;
+      --panel:#141823;
+      --panel2:#0f131c;
+      --text:#e9ecf1;
+      --muted:#a7b0c0;
+      --line:#262c3a;
+      --gold:#c9a24d;
+      --gold2:#f0d28a;
+      --shadow: 0 12px 35px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      --serif: ui-serif, Georgia, "Times New Roman", serif;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:var(--font);
+      background: radial-gradient(1200px 800px at 20% 0%, rgba(201,162,77,.10), transparent 55%),
+                  radial-gradient(900px 600px at 80% 30%, rgba(201,162,77,.08), transparent 60%),
+                  linear-gradient(180deg, #0b0d12 0%, var(--bg) 100%);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .section{padding:64px 0}
+    .section.slim{padding:38px 0}
+
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(15,17,21,.75);
+      border-bottom:1px solid rgba(38,44,58,.6);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{display:flex; gap:12px; align-items:center}
+    .brand-badge{
+      width:36px;height:36px;border-radius:12px;
+      background: linear-gradient(145deg, rgba(201,162,77,.9), rgba(201,162,77,.25));
+      border:1px solid rgba(201,162,77,.55);
+      box-shadow: 0 10px 30px rgba(201,162,77,.12);
+    }
+    .brand-title{display:flex; flex-direction:column; line-height:1.1}
+    .brand-title strong{font-family:var(--serif); letter-spacing:.4px; font-size:16px}
+    .brand-title span{color:var(--muted); font-size:12px}
+
+    .navlinks{display:flex; gap:16px; align-items:center}
+    .navlinks a{
+      font-size:13px;
+      color:var(--muted);
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid transparent;
+    }
+    .navlinks a:hover{
+      color:var(--text);
+      border-color: rgba(201,162,77,.28);
+      background: rgba(201,162,77,.08);
+    }
+    .navlinks a.active{
+      color:var(--text);
+      border-color: rgba(201,162,77,.55);
+      background: rgba(201,162,77,.10);
+    }
+    .hamburger{
+      display:none;
+      width:42px;height:42px;border-radius:12px;
+      border:1px solid rgba(38,44,58,.8);
+      background: rgba(20,24,35,.75);
+      color:var(--text);
+      cursor:pointer;
+    }
+    .hamburger:hover{border-color: rgba(201,162,77,.35)}
+    .mobilemenu{display:none; padding:0 0 14px 0}
+    .mobilemenu a{
+      display:block;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid rgba(38,44,58,.75);
+      background: rgba(20,24,35,.5);
+      color:var(--muted);
+      margin-top:10px;
+    }
+    .mobilemenu a:hover{color:var(--text); border-color: rgba(201,162,77,.35)}
+    .mobilemenu.show{display:block}
+
+    .hero{padding:62px 0 18px 0}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(20,24,35,.8), rgba(15,19,28,.8));
+      border:1px solid rgba(38,44,58,.75);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .card.pad{padding:26px}
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:12px;
+      color:var(--muted);
+      padding:7px 12px;
+      border:1px solid rgba(201,162,77,.28);
+      background: rgba(201,162,77,.07);
+      border-radius:999px;
+    }
+    .kicker i{
+      width:8px;height:8px;border-radius:99px;background:var(--gold);
+      box-shadow: 0 0 16px rgba(201,162,77,.45);
+    }
+    h1{font-family:var(--serif); font-size:44px; line-height:1.05; margin:16px 0 12px; letter-spacing:.2px}
+    h2{font-family:var(--serif); margin:0 0 14px; letter-spacing:.2px}
+    .lede{color:var(--muted); font-size:16px; margin:0 0 18px; max-width:58ch}
+    .actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:20px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 16px; border-radius:14px;
+      border:1px solid rgba(38,44,58,.85);
+      background: rgba(20,24,35,.65);
+      color:var(--text);
+      cursor:pointer;
+      font-weight:600; font-size:13px;
+    }
+    .btn:hover{border-color: rgba(201,162,77,.35)}
+    .btn.primary{
+      border-color: rgba(201,162,77,.65);
+      background: linear-gradient(135deg, rgba(201,162,77,.95), rgba(201,162,77,.35));
+      color:#101216;
+    }
+    .btn.primary:hover{
+      background: linear-gradient(135deg, rgba(240,210,138,.95), rgba(201,162,77,.35));
+    }
+    .btn.ghost{background:transparent}
+    .badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+    .badge{
+      font-size:12px; color:var(--muted);
+      padding:9px 12px; border-radius:999px;
+      border:1px solid rgba(38,44,58,.85);
+      background: rgba(15,19,28,.5);
+    }
+    .sidebox{padding:22px}
+    .sidebox h3{margin:0 0 8px; font-family:var(--serif); letter-spacing:.2px}
+    .sidebox p{margin:0;color:var(--muted);font-size:13px}
+    .sidebox .mini{margin-top:16px; display:grid; gap:10px}
+    .minirow{
+      display:flex; justify-content:space-between; gap:12px;
+      padding:12px 12px; border-radius:14px;
+      border:1px solid rgba(38,44,58,.8);
+      background: rgba(20,24,35,.55);
+    }
+    .minirow b{font-size:13px}
+    .minirow span{color:var(--muted); font-size:12px}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
+    .feature{padding:18px}
+    .feature h4{margin:8px 0 6px; font-family:var(--serif)}
+    .feature p{margin:0;color:var(--muted);font-size:13px}
+    .icon{
+      width:42px;height:42px;border-radius:14px;
+      display:grid;place-items:center;
+      border:1px solid rgba(201,162,77,.35);
+      background: rgba(201,162,77,.08);
+    }
+    .split{display:grid; grid-template-columns: 1fr 1fr; gap:16px}
+    .muted{color:var(--muted)}
+    .hr{height:1px;background: rgba(38,44,58,.75); margin:18px 0}
+    .form{display:grid; gap:12px}
+    .field{display:grid; gap:6px}
+    label{font-size:12px; color:var(--muted)}
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(38,44,58,.9);
+      background: rgba(15,19,28,.65);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    input:focus, textarea:focus, select:focus{
+      border-color: rgba(201,162,77,.55);
+      box-shadow: 0 0 0 4px rgba(201,162,77,.10);
+    }
+    .help{color:var(--muted); font-size:12px}
+    .note{
+      padding:14px 14px;
+      border-radius:14px;
+      border:1px solid rgba(201,162,77,.35);
+      background: rgba(201,162,77,.07);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .gallery-tools{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:14px}
+    .pill{
+      padding:9px 12px; border-radius:999px;
+      border:1px solid rgba(38,44,58,.85);
+      background: rgba(20,24,35,.55);
+      color:var(--muted);
+      cursor:pointer;
+      font-size:12px; font-weight:600;
+    }
+    .pill:hover{border-color: rgba(201,162,77,.35); color:var(--text)}
+    .pill.active{
+      border-color: rgba(201,162,77,.65);
+      background: rgba(201,162,77,.10);
+      color:var(--text);
+    }
+    .gallery{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .tile{
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid rgba(38,44,58,.8);
+      background: rgba(20,24,35,.55);
+      cursor:pointer;
+      transition: transform .15s ease;
+    }
+    .tile:hover{transform: translateY(-2px)}
+    .tile .cap{padding:12px 12px}
+    .tile .cap b{display:block;font-size:13px}
+    .tile .cap span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+    .ph{
+      aspect-ratio: 16/10;
+      background:
+        linear-gradient(120deg, rgba(201,162,77,.18), transparent 45%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
+      display:grid; place-items:center;
+      color: rgba(233,236,241,.72);
+      font-weight:700;
+      letter-spacing:.5px;
+    }
+
+    .lightbox{
+      position:fixed; inset:0;
+      display:none;
+      background: rgba(0,0,0,.72);
+      z-index:999;
+      padding:18px;
+    }
+    .lightbox.open{display:grid; place-items:center}
+    .lightbox-inner{
+      width:min(980px, 100%);
+      background: rgba(20,24,35,.92);
+      border:1px solid rgba(38,44,58,.9);
+      border-radius:18px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .lightbox-top{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 14px;
+      border-bottom:1px solid rgba(38,44,58,.75);
+    }
+    .lightbox-top b{font-family:var(--serif); letter-spacing:.2px}
+    .lbclose{
+      width:40px;height:40px;border-radius:12px;
+      border:1px solid rgba(38,44,58,.85);
+      background: rgba(15,19,28,.55);
+      color:var(--text);
+      cursor:pointer;
+    }
+    .lbclose:hover{border-color: rgba(201,162,77,.35)}
+    .lightbox-body{display:grid; grid-template-columns: 1fr 1fr}
+    .lbpanel{padding:14px}
+    .lbpanel .ph{aspect-ratio:16/10; border-radius:14px}
+    .lbmeta{padding:14px; color:var(--muted); font-size:13px}
+    .lbmeta .tag{
+      display:inline-flex; padding:6px 10px; border-radius:999px;
+      border:1px solid rgba(201,162,77,.35);
+      background: rgba(201,162,77,.08);
+      margin-right:8px;
+      color:var(--text);
+      font-size:12px;
+    }
+
+    .page{display:none}
+    .page.active{display:block}
+
+    .footer{
+      padding:28px 0;
+      border-top:1px solid rgba(38,44,58,.6);
+      color:var(--muted);
+      font-size:12px;
+    }
+    .footer-grid{
+      display:flex; flex-wrap:wrap;
+      align-items:center; justify-content:space-between;
+      gap:10px;
+    }
+    .footer a{color:var(--gold2)}
+    .smallcaps{letter-spacing:.12em; text-transform:uppercase; font-size:11px}
+
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      h1{font-size:38px}
+      .grid3{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+      .lightbox-body{grid-template-columns:1fr}
+    }
+    @media (max-width: 760px){
+      .navlinks{display:none}
+      .hamburger{display:inline-grid; place-items:center}
+      .gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- TOP NAV -->
+  <header class="topbar">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#home" aria-label="SureFire Home">
+          <div class="brand-badge"></div>
+          <div class="brand-title">
+            <strong>SureFire Handyman Services+</strong>
+            <span>A Division of Basket of Dreams LLC</span>
+          </div>
+        </a>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a href="#home" data-nav="home">Home</a>
+          <a href="#about" data-nav="about">About</a>
+          <a href="#gallery" data-nav="gallery">Before &amp; After</a>
+          <a href="#subs" data-nav="subs">Subcontractors</a>
+          <a href="#contact" data-nav="contact">Request Info</a>
+        </nav>
+
+        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+
+      <div id="mobilemenu" class="mobilemenu" aria-label="Mobile menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Before &amp; After</a>
+        <a href="#subs">Subcontractors</a>
+        <a href="#contact">Request Info</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="page-home" class="page">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="card pad">
+              <div class="kicker"><i></i><span class="smallcaps">Flat-rate. Professional. No surprises.</span></div>
+              <h1>Handyman work that’s handled — fast, clean, and accountable.</h1>
+              <p class="lede">
+                SureFire Handyman Services+ is a dispatch-first handyman company. We book, schedule, and manage the job
+                so you get reliable service without the runaround.
+              </p>
+              <div class="actions">
+                <a class="btn primary" href="#contact">Request Service</a>
+                <a class="btn" href="#gallery">View Before &amp; After</a>
+                <a class="btn ghost" href="#subs">Become a Subcontractor</a>
+              </div>
+              <div class="badges">
+                <div class="badge">Insured Professionals</div>
+                <div class="badge">Clear Scope + Documentation</div>
+                <div class="badge">Quality Standards</div>
+              </div>
+            </div>
+
+            <aside class="card sidebox">
+              <h3>What we do (Tier 1 services)</h3>
+              <p>High-demand jobs we can price and schedule quickly.</p>
+              <div class="mini">
+                <div class="minirow"><b>TV Mounting</b><span>Flat-rate</span></div>
+                <div class="minirow"><b>Ceiling Fans &amp; Fixtures</b><span>Flat-rate</span></div>
+                <div class="minirow"><b>Faucets &amp; Toilets</b><span>Flat-rate</span></div>
+                <div class="minirow"><b>Drywall Patch &amp; Paint</b><span>Flat-rate</span></div>
+                <div class="minirow"><b>Doors, Trim, Hardware</b><span>Flat-rate</span></div>
+              </div>
+              <div class="hr"></div>
+              <p class="help">Want to subcontract? We provide consistent jobs. You bring tools + insurance.</p>
+              <div style="margin-top:12px">
+                <a class="btn primary" href="#subs">Apply to Subcontract</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section slim">
+        <div class="container">
+          <div class="grid3">
+            <div class="card feature">
+              <div class="icon">✓</div>
+              <h4>Clear scope</h4>
+              <p>We define the job before it starts. No chaos, no “surprise” pricing.</p>
+            </div>
+            <div class="card feature">
+              <div class="icon">⏱</div>
+              <h4>Fast scheduling</h4>
+              <p>Flat-rate services let us book quickly and keep things moving.</p>
+            </div>
+            <div class="card feature">
+              <div class="icon">📷</div>
+              <h4>Documentation</h4>
+              <p>Before/after photos help keep quality and accountability consistent.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="split">
+            <div class="card pad">
+              <h2>For clients</h2>
+              <p class="muted">
+                Request service, share details, and get a clear next step. We confirm scope, schedule a pro, and keep the job tight.
+              </p>
+              <div class="actions">
+                <a class="btn primary" href="#contact">Request More Info</a>
+                <a class="btn" href="#about">How We Work</a>
+              </div>
+            </div>
+            <div class="card pad">
+              <h2>For subcontractors</h2>
+              <p class="muted">
+                If you’re reliable and insured, we can feed you consistent work. We handle clients, scheduling, and payment processing.
+              </p>
+              <div class="actions">
+                <a class="btn primary" href="#subs">Join the Network</a>
+                <a class="btn" href="#contact">Ask a Question</a>
+              </div>
+              <div class="note" style="margin-top:14px">
+                Insurance is required. No exceptions. We’re building a professional brand — not a free-for-all.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="page-about" class="page">
+      <section class="section">
+        <div class="container">
+          <div class="card pad">
+            <div class="kicker"><i></i><span class="smallcaps">About / What we do</span></div>
+            <h1 style="margin-top:14px">We don’t guess. We scope, schedule, and execute.</h1>
+            <p class="lede">
+              SureFire Handyman Services+ is built to remove the two biggest problems in handyman work:
+              <b>unreliable scheduling</b> and <b>unpredictable pricing</b>.
+            </p>
+
+            <div class="hr"></div>
+
+            <div class="split">
+              <div>
+                <h2>What we do</h2>
+                <p class="muted">
+                  We offer select, high-demand services that can be priced clearly and scheduled quickly.
+                  We manage the job from intake to completion, including documentation.
+                </p>
+                <ul class="muted">
+                  <li>TV mounting, fixtures, ceiling fans</li>
+                  <li>Light plumbing installs (faucets, toilets)</li>
+                  <li>Drywall patching, interior paint touch-ups</li>
+                  <li>Doors, trim, hardware, small repairs</li>
+                </ul>
+                <div class="note">
+                  We focus on repeatable services. If it requires permits, structural work, gas lines, or major electrical — we don’t do it.
+                </div>
+              </div>
+
+              <div>
+                <h2>How it works</h2>
+                <ol class="muted">
+                  <li><b>Request:</b> You tell us what you need + photos (optional).</li>
+                  <li><b>Confirm:</b> We confirm scope and provide a flat-rate range.</li>
+                  <li><b>Schedule:</b> We assign a qualified professional.</li>
+                  <li><b>Document:</b> Before/after photos for accountability.</li>
+                  <li><b>Close:</b> Final confirmation and payment.</li>
+                </ol>
+                <div class="actions">
+                  <a class="btn primary" href="#contact">Request Info</a>
+                  <a class="btn" href="#gallery">See Our Work</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <h2>Our standards</h2>
+            <div class="grid3" style="margin-top:10px">
+              <div class="card feature">
+                <div class="icon">🧾</div>
+                <h4>Clear scope</h4>
+                <p>Scope changes require approval. No side-deals.</p>
+              </div>
+              <div class="card feature">
+                <div class="icon">🛡</div>
+                <h4>Insured pros</h4>
+                <p>We work with insured independent subcontractors.</p>
+              </div>
+              <div class="card feature">
+                <div class="icon">📍</div>
+                <h4>Reliability</h4>
+                <p>On-time expectations. Clean communication. Clean finish.</p>
+              </div>
+            </div>
+
+            <div class="hr"></div>
+            <p class="help">
+              Want to work with us? If you’re insured and reliable, apply on the subcontractor page.
+            </p>
+            <div class="actions">
+              <a class="btn primary" href="#subs">Become a Subcontractor</a>
+              <a class="btn ghost" href="#contact">Ask a Question</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="page-gallery" class="page">
+      <section class="section">
+        <div class="container">
+          <div class="card pad">
+            <div class="kicker"><i></i><span class="smallcaps">Before &amp; After</span></div>
+            <h1 style="margin-top:14px">Real work, documented.</h1>
+            <p class="lede">These are placeholder tiles. Replace with your photos anytime.</p>
+
+            <div class="gallery-tools">
+              <button class="pill active" data-filter="all">All</button>
+              <button class="pill" data-filter="mounting">TV Mounting</button>
+              <button class="pill" data-filter="fixtures">Fixtures/Fans</button>
+              <button class="pill" data-filter="plumbing">Plumbing</button>
+              <button class="pill" data-filter="drywall">Drywall/Paint</button>
+              <button class="pill" data-filter="doors">Doors/Trim</button>
+            </div>
+
+            <div id="gallery" class="gallery">
+              <div class="tile" data-cat="mounting" data-title="TV Mount + Cable Management"
+                   data-meta="Scope: mount, level, conceal cables. Finish: clean lines, no wall damage.">
+                <div class="ph">PROJECT</div>
+                <div class="cap"><b>TV Mount + Cables</b><span>Category: Mounting</span></div>
+              </div>
+
+              <div class="tile" data-cat="fixtures" data-title="Ceiling Fan Replacement"
+                   data-meta="Scope: remove old fan, install new, test. Finish: balanced + quiet.">
+                <div class="ph">PROJECT</div>
+                <div class="cap"><b>Ceiling Fan Install</b><span>Category: Fixtures/Fans</span></div>
+              </div>
+
+              <div class="tile" data-cat="plumbing" data-title="Faucet Replacement"
+                   data-meta="Scope: swap faucet, reseal, test for leaks. Finish: clean caulk line.">
+                <div class="ph">PROJECT</div>
+                <div class="cap"><b>Faucet Replacement</b><span>Category: Plumbing</span></div>
+              </div>
+
+              <div class="tile" data-cat="drywall" data-title="Drywall Patch + Paint Blend"
+                   data-meta="Scope: patch, sand, texture match (when possible), paint blend.">
+                <div class="ph">PROJECT</div>
+                <div class="cap"><b>Drywall Patch</b><span>Category: Drywall/Paint</span></div>
+              </div>
+
+              <div class="tile" data-cat="doors" data-title="Interior Door Install"
+                   data-meta="Scope: hang door, align, hardware install. Finish: smooth close + latch.">
+                <div class="ph">PROJECT</div>
+                <div class="cap"><b>Door Install</b><span>Category: Doors/Trim</span></div>
+              </div>
+
+              <div class="tile" data-cat="fixtures" data-title="Light Fixture Swap"
+                   data-meta="Scope: replace fixture, test, clean install.">
+                <div class="ph">PROJECT</div>
+                <div class="cap"><b>Light Fixture Swap</b><span>Category: Fixtures/Fans</span></div>
+              </div>
+            </div>
+
+            <div class="hr"></div>
+            <div class="actions">
+              <a class="btn primary" href="#contact">Request Service</a>
+              <a class="btn" href="#subs">Work With Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-inner" role="dialog" aria-modal="true" aria-label="Before and after viewer">
+          <div class="lightbox-top">
+            <b id="lbTitle">Before &amp; After</b>
+            <button id="lbClose" class="lbclose" aria-label="Close">✕</button>
+          </div>
+          <div class="lightbox-body">
+            <div class="lbpanel"><div id="lbBefore" class="ph">BEFORE</div></div>
+            <div class="lbpanel"><div id="lbAfter" class="ph">AFTER</div></div>
+          </div>
+          <div id="lbMeta" class="lbmeta"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBCONTRACTORS -->
+    <section id="page-subs" class="page">
+      <section class="section">
+        <div class="container">
+          <div class="split">
+            <div class="card pad">
+              <div class="kicker"><i></i><span class="smallcaps">Become a subcontractor</span></div>
+              <h1 style="margin-top:14px">We bring the work. You bring the tools + insurance.</h1>
+              <p class="lede">
+                SureFire is a dispatch-first handyman company. We handle client intake, scheduling, and payment processing.
+                We work with professionals who show up, finish clean, and document before/after.
+              </p>
+
+              <div class="note"><b>Non-negotiable:</b> $1M General Liability insurance. No exceptions.</div>
+
+              <div class="hr"></div>
+              <h2>What we expect</h2>
+              <ul class="muted">
+                <li>On-time arrivals and professional behavior</li>
+                <li>Scope compliance (no unapproved add-ons)</li>
+                <li>Before/after photos for every job</li>
+                <li>Clean finish + clean communication</li>
+              </ul>
+
+              <div class="hr"></div>
+              <h2>Common job categories</h2>
+              <div class="grid3" style="margin-top:10px">
+                <div class="card feature"><div class="icon">📺</div><h4>Mounting</h4><p>TV mounts, shelves, hardware.</p></div>
+                <div class="card feature"><div class="icon">💡</div><h4>Fixtures</h4><p>Lights, ceiling fans, swaps.</p></div>
+                <div class="card feature"><div class="icon">🚿</div><h4>Plumbing</h4><p>Faucets, toilets (light work).</p></div>
+              </div>
+            </div>
+
+            <div class="card pad">
+              <h2>Apply now</h2>
+              <p class="help">This is a demo form. It confirms submission locally. To send to email, connect to Formspree later.</p>
+
+              <form class="form" id="subForm">
+                <div class="field"><label for="sname">Full name</label><input id="sname" required placeholder="First & Last"></div>
+                <div class="field"><label for="sphone">Phone</label><input id="sphone" required placeholder="(555) 555-5555"></div>
+                <div class="field"><label for="semail">Email</label><input id="semail" type="email" required placeholder="you@email.com"></div>
+                <div class="field"><label for="scity">City / Service area</label><input id="scity" required placeholder="Orlando, FL (example)"></div>
+                <div class="field">
+                  <label for="strade">Primary services</label>
+                  <select id="strade" required>
+                    <option value="">Choose…</option>
+                    <option>General Handyman</option>
+                    <option>Drywall / Paint</option>
+                    <option>Fixtures / Fans</option>
+                    <option>Light Plumbing</option>
+                    <option>Doors / Trim</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="sinsured">Do you currently have $1M General Liability insurance?</label>
+                  <select id="sinsured" required>
+                    <option value="">Choose…</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="field"><label for="snotes">Notes</label><textarea id="snotes" placeholder="Experience, availability, crew size."></textarea></div>
+
+                <button class="btn primary" type="submit">Submit Application</button>
+
+                <div class="note" style="margin-top:12px">
+                  After review, we’ll request your COI naming <b>Basket of Dreams LLC</b> as additional insured.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="page-contact" class="page">
+      <section class="section">
+        <div class="container">
+          <div class="split">
+            <div class="card pad">
+              <div class="kicker"><i></i><span class="smallcaps">Request service / info</span></div>
+              <h1 style="margin-top:14px">Tell us what you need. We’ll handle the rest.</h1>
+              <p class="lede">
+                Flat-rate services. Clean scheduling. Clear next steps.
+                Share details and we’ll follow up.
+              </p>
+
+              <div class="hr"></div>
+              <h2>Common requests</h2>
+              <ul class="muted">
+                <li>TV mounting</li>
+                <li>Ceiling fan or light fixture swaps</li>
+                <li>Faucets / toilets (light plumbing)</li>
+                <li>Drywall patch / paint touch-ups</li>
+                <li>Doors, trim, hardware repairs</li>
+              </ul>
+
+              <div class="note">
+                If your request involves permits, structural work, gas lines, or major electrical, we may decline or refer out.
+              </div>
+
+              <div class="hr"></div>
+              <div class="help">
+                <b>Business:</b> Basket of Dreams LLC d/b/a SureFire Handyman Services+<br/>
+                <b>Email:</b> info@surefirehandyman.com (replace)<br/>
+                <b>Phone:</b> (XXX) XXX-XXXX (replace)
+              </div>
+            </div>
+
+            <div class="card pad">
+              <h2>Request form</h2>
+              <p class="help">This is a demo form. It confirms submission locally. To send to email, connect to Formspree later.</p>
+
+              <form class="form" id="clientForm">
+                <div class="field"><label for="cname">Full name</label><input id="cname" required placeholder="First & Last"></div>
+                <div class="field"><label for="cphone">Phone</label><input id="cphone" required placeholder="(555) 555-5555"></div>
+                <div class="field"><label for="cemail">Email</label><input id="cemail" type="email" required placeholder="you@email.com"></div>
+                <div class="field"><label for="caddress">Service address</label><input id="caddress" placeholder="Street, City, State"></div>
+                <div class="field">
+                  <label for="cservice">Service type</label>
+                  <select id="cservice" required>
+                    <option value="">Choose…</option>
+                    <option>TV Mounting</option>
+                    <option>Ceiling Fan Install</option>
+                    <option>Light Fixture Swap</option>
+                    <option>Faucet Replacement</option>
+                    <option>Toilet Replacement</option>
+                    <option>Drywall Patch</option>
+                    <option>Paint Touch-Up</option>
+                    <option>Door/Trim Repair</option>
+                    <option>Other (describe)</option>
+                  </select>
+                </div>
+                <div class="field"><label for="cdetails">Details</label><textarea id="cdetails" placeholder="What’s going on? Any timing constraints?"></textarea></div>
+                <button class="btn primary" type="submit">Request More Info</button>
+              </form>
+
+              <div class="note" style="margin-top:12px">
+                You’ll get a follow-up with next steps, scheduling options, and confirmation of scope.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>© <span id="year"></span> SureFire Handyman Services+ • Basket of Dreams LLC</div>
+        <div>
+          <a href="#contact">Request Info</a> •
+          <a href="#subs">Subcontractors</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+
+    // Mobile menu
+    const btn = $("#hamburger");
+    const menu = $("#mobilemenu");
+    btn?.addEventListener("click", () => {
+      menu.classList.toggle("show");
+      btn.setAttribute("aria-expanded", menu.classList.contains("show") ? "true" : "false");
+    });
+
+    // Router (hash pages)
+    const pages = {
+      home: $("#page-home"),
+      about: $("#page-about"),
+      gallery: $("#page-gallery"),
+      subs: $("#page-subs"),
+      contact: $("#page-contact"),
+    };
+
+    function setActiveNav(key){
+      $$("a[data-nav]").forEach(a => a.classList.toggle("active", a.dataset.nav === key));
+    }
+
+    function showPage(key){
+      if(!pages[key]) key = "home";
+      Object.entries(pages).forEach(([k, el]) => el.classList.toggle("active", k === key));
+      setActiveNav(key);
+      window.scrollTo({top:0, behavior:"instant"});
+      // close mobile menu on nav
+      menu?.classList.remove("show");
+      btn?.setAttribute("aria-expanded", "false");
+      // init gallery filter if on gallery
+      if(key === "gallery") applyFilter("all");
+    }
+
+    function route(){
+      const hash = (location.hash || "#home").replace("#", "");
+      showPage(hash);
+    }
+    window.addEventListener("hashchange", route);
+    route();
+
+    // Fake forms (local confirmation)
+    $("#subForm")?.addEventListener("submit", (e)=>{
+      e.preventDefault();
+      alert("Application received. If you meet requirements, we’ll reach out for proof of insurance and onboarding.");
+      e.target.reset();
+    });
+    $("#clientForm")?.addEventListener("submit", (e)=>{
+      e.preventDefault();
+      alert("Request received. We’ll contact you with next steps and scheduling options.");
+      e.target.reset();
+    });
+
+    // Gallery: filter + lightbox
+    const pills = $$(".pill[data-filter]");
+    const tiles = $$(".tile[data-cat]");
+    const lb = $("#lightbox");
+    const lbTitle = $("#lbTitle");
+    const lbBefore = $("#lbBefore");
+    const lbAfter = $("#lbAfter");
+    const lbMeta = $("#lbMeta");
+    const lbClose = $("#lbClose");
+
+    function applyFilter(cat){
+      pills.forEach(p => p.classList.toggle("active", p.dataset.filter === cat));
+      tiles.forEach(t => {
+        const show = (cat === "all") || (t.dataset.cat === cat);
+        t.style.display = show ? "" : "none";
+      });
+    }
+    pills.forEach(p => p.addEventListener("click", () => applyFilter(p.dataset.filter)));
+
+    function openLB(tile){
+      const title = tile.dataset.title || "Before & After";
+      const meta = tile.dataset.meta || "";
+      const tag = tile.dataset.cat || "work";
+
+      lbTitle.textContent = title;
+      lbMeta.innerHTML = `
+        <div class="tag">${tag.toUpperCase()}</div>
+        ${meta ? `<div style="margin-top:10px">${meta}</div>` : ""}
+        <div class="hr"></div>
+        <div><b>Tip:</b> Replace placeholders with your real photos later.</div>
+      `;
+
+      lbBefore.textContent = "BEFORE";
+      lbAfter.textContent = "AFTER";
+
+      lb.classList.add("open");
+      lb.setAttribute("aria-hidden", "false");
+    }
+    function closeLB(){
+      lb.classList.remove("open");
+      lb.setAttribute("aria-hidden", "true");
+    }
+    tiles.forEach(t => t.addEventListener("click", () => openLB(t)));
+    lbClose?.addEventListener("click", closeLB);
+    lb?.addEventListener("click", (e) => { if(e.target === lb) closeLB(); });
+    document.addEventListener("keydown", (e) => { if(e.key === "Escape") closeLB(); });
+
+    // Footer year
+    $("#year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
